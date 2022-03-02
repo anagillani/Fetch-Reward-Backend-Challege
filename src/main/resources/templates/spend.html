@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+</head>
+
+
+<body>
+<table border="1">
+    <tr>
+        <th>Payer name</th>
+        <th>Points Spent</th>
+        <th>Balance Left</th>
+    </tr>
+    <tr th:each = "User: ${User}">
+        <td th:text="${User.name}"></td>
+        <td th:text="${User.spent}"></td>
+        <td th:text="${User.balance}"></td>
+
+    </tr>
+</table>
+<button><a href="/transaction/add"> Abc</button>
+</form>
+</body>
+</html>

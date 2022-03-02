@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+</head>
+<body>
+<h3><center>Enter the points you like to spend</center></h3>
+ <div class ="container">
+  <form action="/transaction/spendResult" method="GET"  >
+  	<div class="form-group">
+    <input type="number" class="form-control" id="point" th:name="points" th:value="${points}">
+  </div>
+  <button type="submit" name="submitButton">Submit</button>
+</form>
+ </div>	
+</body>
+
+</html>
